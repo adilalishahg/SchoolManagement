@@ -118,7 +118,7 @@ const menuItems = [
 
 const Menu = ({isOpen}) => {
   return (
-    <div className="mt-4 text-sm scrollbaroverflow overflow-y-auto max-h-[85vh] px-2  pb-4">
+    <div className="mt-4 text-sm scrollbaroverflow overflow-y-auto  overflow-scroll  max-h-[85vh] px-2  pb-4">
       {menuItems.map((i) => (
         <div key={i.title} className="flex flex-col gap-2">
           <span className="hidden lg:block text-gray-400 font-light my-4">{i.title}</span>
