@@ -31,6 +31,7 @@ export default function DashboardLayout({
   }, []); // Empty dependency array means this effect runs once on mount
   const [isOpen,setIsOpen] = useState(false)
   return ( 
+    
       <div className="h-screen flex">
         {/* Left */}
         <div className={` ease-in-out duration-500 ${isOpen ? "w-[4%]":"w-[14%] xl:w-[18%] md:w-[8%] lg:w-[16%]"}`}>
@@ -49,9 +50,9 @@ export default function DashboardLayout({
             </Link>
             <div className="lg:flex flex-col gap-[4.5px] cursor-pointer hidden" 
               onClick={()=>setIsOpen(prev=>!prev)}>
-                <div className={`w-6 h-1 bg-purple-500 rounded-sm `}></div>
-                <div className={`w-6 h-1 bg-purple-500 rounded-sm  `}></div>
-                <div className={`w-6 h-1 bg-purple-500 rounded-sm `}></div>
+                <div className={`w-6 h-1 bg-primary rounded-sm `}></div>
+                <div className={`w-6 h-1 bg-primary rounded-sm  `}></div>
+                <div className={`w-6 h-1 bg-primary rounded-sm `}></div>
               </div>
             </div>
           <Menu isOpen={isOpen}/>

@@ -130,7 +130,7 @@ const Menu = ({isOpen}) => {
               href={item.href}
               // href={"#"}
               key={item.label}
-              className={`group flex items-center justify-center lg:justify-start gap-4 text-gray-500 p-2 ml-2  ${selectedItem === item.label && 'bg-purple-500 text-white rounded-md' } hover:bg-purple-500 hover:rounded-md hover:text-white  hover:text-md hover:scale-105 transition-transform duration-200`}
+              className={`group flex items-center justify-center lg:justify-start gap-4 text-gray-500 p-2 ml-2  ${selectedItem === item.label && 'bg-primary text-white rounded-md' } hover:bg-primary hover:rounded-md hover:text-white  hover:text-md hover:scale-105 transition-transform duration-200`}
               onClick={() => setSelectedItem(item.label)}
             >
               <Image

@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import { useState } from "react"
-
+import { LuSun } from "react-icons/lu";
  
 const Navbar = () => {
     const [profileOptionOpen,isProfileOptionOpen] = useState(false)
@@ -19,7 +19,10 @@ const Navbar = () => {
             </div>
             <div className="bg-white relative rounded-full w-7 h-7 flex items-center justify-center cursor-pointer">
                 <Image src="/announcement.png" alt="" width={20} height={20}/>
-                <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center text-center justify-center rounded-full bg-purple-500 text-white text-xs">1 </div>
+                <div className="absolute -top-3 -right-3 w-5 h-5 flex items-center text-center justify-center rounded-full bg-primary text-white text-xs">1 </div>
+            </div>
+            <div className="bg-white relative rounded-full w-8 h-8 flex items-center justify-center cursor-pointer">
+                <LuSun className="w-8 h-8"/>
             </div>
             <div className="flex flex-col">
                 <span className="text-xs leading-3 font-medium">John Doe</span>
@@ -27,7 +30,7 @@ const Navbar = () => {
             </div>
             <div className="relative">
                 <Image src="/avatar.png" alt="avatar" width={36} height={36} className="rounded-full" onClick={()=>isProfileOptionOpen(prev=>!prev)}/>
-                <div className={`${profileOptionOpen ? "absolute":"hidden"} top-[2.5rem] right-1 rounded px-2 scrollbaroverflow overflow-y-scroll w-36 h-36 bg-purple-500 text-white`}>
+                <div className={`${profileOptionOpen ? "absolute":"hidden"} top-[2.5rem] right-1 rounded px-2 scrollbaroverflow overflow-y-scroll w-36 h-36 bg-primary text-white`}>
                     <div>asd</div>
                     <div>asd</div>
                     <div>asd</div>
