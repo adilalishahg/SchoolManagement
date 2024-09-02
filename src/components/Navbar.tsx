@@ -27,7 +27,7 @@ const Navbar = () => {
             </div>
             <div className="relative">
                 <Image src="/avatar.png" alt="avatar" width={36} height={36} className="rounded-full" onClick={()=>isProfileOptionOpen(prev=>!prev)}/>
-                <div className={`${profileOptionOpen ? "absolute":"hidden"} top-[2.5rem] right-1 rounded px-2 scrollbaroverflow overflow-y-scroll w-36 h-36 bg-blue-500`}>
+                <div className={`${profileOptionOpen ? "absolute":"hidden"} top-[2.5rem] right-1 rounded px-2 scrollbaroverflow overflow-y-scroll w-36 h-36 bg-purple-500 text-white`}>
                     <div>asd</div>
                     <div>asd</div>
                     <div>asd</div>

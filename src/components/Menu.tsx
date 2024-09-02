@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const menuItems = [
   {
@@ -117,16 +119,30 @@ const menuItems = [
 ];
 
 const Menu = ({isOpen}) => {
+  const [selectedItem, setSelectedItem] = useState("");
   return (
-    <div className="mt-4 text-sm scrollbaroverflow overflow-y-auto  overflow-scroll  max-h-[85vh] px-2  pb-4">
+    <div className="mt-4 text-sm  scrollbaroverflow overflow-y-auto  overflow-scroll  max-h-[85vh] px-2  pb-4">
       {menuItems.map((i) => (
         <div key={i.title} className="flex flex-col gap-2">
           <span className="hidden lg:block text-gray-400 font-light my-4">{i.title}</span>
           {i.items.map(item=>(
-            <Link href={item.href} key={item.label} 
-                  className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2 ml-2">
-              <Image src={item.icon} width={20} height={20} alt={item.icon}/>
-              <span className={`hidden ${isOpen?"hidden":" lg:block"}`}>{item.label}</span>
+              <Link
+              href={item.href}
+              // href={"#"}
+              key={item.label}
+              className={`group flex items-center justify-center lg:justify-start gap-4 text-gray-500 p-2 ml-2  ${selectedItem === item.label && 'bg-purple-500 text-white rounded-md' } hover:bg-purple-500 hover:rounded-md hover:text-white  hover:text-md hover:scale-105 transition-transform duration-200`}
+              onClick={() => setSelectedItem(item.label)}
+            >
+              <Image
+                src={item.icon}
+                width={20}
+                height={20}
+                alt={item.icon}
+                className={`group-hover:invert group-hover:brightness-0 group-hover:contrast-200 group-hover:scale-110 transition-transform duration-200 ${selectedItem === item.label && 'invert brightness-0' }`}
+              />
+              <span className={`hidden ${isOpen ? "hidden" : "lg:block"}`}>
+                {item.label}
+              </span>
             </Link>
           ))}
         </div>
