@@ -1,5 +1,7 @@
 "use client"
+import Announcement from "@/components/Announcement";
 import AttendanceChart from "@/components/AttendanceChart";
+import EventCalender from "@/components/EventCalender";
 import FinanceChart from "@/components/FinanceChart";
 // import CountChart from "@/components/CountChart"
 import UserCard from "@/components/UserCard"
@@ -42,7 +44,10 @@ const AdminPage = ()=>{
                 </div>
             </div>
             {/* Right */}
-            <div className="w-full lg:w-1/3"></div>
+            <div className="w-full lg:w-1/3 flex flex-col gap-8">
+                <EventCalender/>
+                <Announcement />
+            </div>
         </div>
     )
 }

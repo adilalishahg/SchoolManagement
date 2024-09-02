@@ -38,11 +38,11 @@ export default function DashboardLayout({
           <div className={`flex items-center pt-2 ${isOpen ? "flex-col lg:justify-start":"justify-center  gap-3"}`}>
             <Link href="/" className={`flex items-center justify-center gap-3  ${isOpen &&"lg:justify-start p-4"}`}>
               <Image src="/logo.png" alt="schoolLogo" width={32} height={32} />
-              <span className={`hidden ${isOpen ? "lg:hidden":" lg:block"}`}>
-                  <span className="md:hidden lg:block">
+              <span className={`hidden font-bold text-lg ${isOpen ? "lg:hidden":" lg:block"}`}>
+                  <span className="md:hidden lg:block ">
                     SchoolManagement
                   </span>
-                  <span className="hidden md:block  lg:hidden">
+                  <span className="hidden md:block  lg:hidden ">
                     S.M.S
                   </span>
                 </span>
@@ -58,7 +58,7 @@ export default function DashboardLayout({
           <Menu isOpen={isOpen}/>
         </div>
         {/* Right */}
-        <div className={`scrollbaroverflow ${isOpen ? "w-[96%]":"w-[86%] xl:w-[86%] md:w-[92%] lg:w-[82%] overflow-scroll"} bg-[#F7F8FA] `} >
+        <div className={`scrollbaroverflow ${isOpen ? "w-[96%]":"w-[86%] xl:w-[86%] md:w-[92%] lg:w-[82%]"}  overflow-scroll bg-[#F7F8FA] `} >
           <Navbar/>
           {children}
         </div>
