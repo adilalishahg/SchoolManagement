@@ -36,10 +36,11 @@ const Announcement = () => {
                         2025-03-20
                     </span>
                 </div>
+                <p className="text-sm text-gray-400 mt-1">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vitae 
+                </p>
             </div>
-            <p className="text-sm text-gray-400 mt-1">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus vitae 
-            </p>
+           
         </div>
     </div>
   )

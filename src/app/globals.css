@@ -14,7 +14,7 @@
 .react-calendar{
   width: 100% !important;
   border: none !important;
-  font-family: "Inter",sans-serif !important
+  font-family: "Inter",sans-serif !important;
 }
 .react-calendar__tile{
   border-radius: 100% !important;
@@ -27,11 +27,102 @@
   font-size: x-large;
 }
 .react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
-  background-color: #A855F7 !important;
+  background-color: theme('colors.primary')  !important;
   color:#FFF !important;
 }
 .react-calendar__tile--active{
   background-color: #C3EBFA !important;
   color:black !important;
   font-weight: bold !important;
+}
+.rbc-toolbar-label{
+  text-align:right !important;
+  padding:0px 20px !important;
+} 
+/* Target the button group */
+.rbc-btn-group button {
+  border: none  !important; /* Remove border */ 
+  font-size: 16px !important; /* Change font size */
+  padding: 8px 16px  !important; /* Adjust padding */
+  border-radius: 4px  !important; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  margin-left:2px !important;
+}
+
+/* Hover effect */
+.rbc-btn-group button:hover {
+  background-color: #ba94dd !important; /* Darken background color on hover */
+  color: #f0f0f1 !important; /* Darken background color on hover */
+}
+
+/* Active button state */
+.rbc-btn-group button.rbc-active {
+  background-color: theme('colors.primary')  !important; /* Active background color */
+  font-weight: bold !important; /* Make the active button bold */
+  color: #f0f0f1 !important; /* Darken background color on hover */
+}
+
+/* Optional: Add margin to space out buttons */
+.rbc-btn-group button + button {
+  margin-left: 8px;
+}
+.rbc-event, .rbc-day-slot .rbc-background-event {
+  background-color: theme('colors.primary') !important;
+  text-align:center !important;
+  border-radius: 15px !important; 
+}
+
+.rbc-time-view{
+  /* border-color: theme('colors.primary')  !important;  */
+}
+.rbc-time-header{
+  display: none !important;
+}
+.rbc-time-content{
+  border:none !important;
+}
+.rbc-time-gutter.rbc-time-column{
+  font-size: 12px !important;
+}
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group{
+  padding: 0px 20px !important;
+}
+/* .rbc-timeslot-group{
+  background-color: theme('colors.lamaPurpleLight')  !important;
+} */
+.rbc-event:nth-child(1) {
+  background-color: #e2f8ff !important;
+}
+.rbc-event:nth-child(2) {
+  background-color: #fefce8 !important;
+}
+.rbc-event:nth-child(3) {
+  background-color: #f2f1ff !important;
+}
+.rbc-event:nth-child(4) {
+  background-color: #fdf2fb !important;
+}
+.rbc-event:nth-child(5) {
+  background-color: #e2f8ff !important;
+}
+.rbc-event:nth-child(6) {
+  background-color: #fefce8 !important;
+}
+.rbc-event:nth-child(7) {
+  background-color: #f2f1ff !important;
+}
+.rbc-event:nth-child(8) {
+  background-color: #fdf2fb !important;
+}
+
+.rbc-event-label{
+  color: gray !important;
+  margin-bottom: 5px;
+}
+.rbc-event-content{
+  color: #000 !important;
+  font-weight: 600;
+}
+.rbc-event{
+  height: auto !important;
 }

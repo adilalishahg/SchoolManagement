@@ -58,7 +58,7 @@ export default function DashboardLayout({
           <Menu isOpen={isOpen}/>
         </div>
         {/* Right */}
-        <div className={`scrollbaroverflow ${isOpen ? "w-[96%]":"w-[86%] xl:w-[86%] md:w-[92%] lg:w-[82%]"}  overflow-scroll bg-[#F7F8FA] `} >
+        <div className={`scrollbaroverflow flex flex-col ${isOpen ? "w-[96%]":"w-[86%] xl:w-[86%] md:w-[92%] lg:w-[82%]"}  overflow-scroll bg-[#F7F8FA] `} >
           <Navbar/>
           {children}
         </div>

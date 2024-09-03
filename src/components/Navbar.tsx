@@ -6,7 +6,8 @@ import { LuSun } from "react-icons/lu";
 const Navbar = () => {
     const [profileOptionOpen,isProfileOptionOpen] = useState(false)
   return (
-    <div className="flex items-center justify-between p-4">
+    <div className="flex items-center justify-between p-4 bg-white sticky top-0 z-50 shadow-md">
+
         {/* Search Bar */}
         <div className="hidden md:flex items-center gap-2 text-xs rounded-full ring-[1.5px] ring-gray-300 px-4 py-3">
             <Image src="/search.png" alt="search" width={14} height={14}/>

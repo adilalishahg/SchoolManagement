@@ -1,4 +1,5 @@
 "use client"
+import { role } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -125,26 +126,30 @@ const Menu = ({isOpen}) => {
       {menuItems.map((i) => (
         <div key={i.title} className="flex flex-col gap-2">
           <span className="hidden lg:block text-gray-400 font-light my-4">{i.title}</span>
-          {i.items.map(item=>(
-              <Link
-              href={item.href}
-              // href={"#"}
-              key={item.label}
-              className={`group flex items-center justify-center lg:justify-start gap-4 text-gray-500 p-2 ml-2  ${selectedItem === item.label && 'bg-primary text-white rounded-md' } hover:bg-primary hover:rounded-md hover:text-white  hover:text-md hover:scale-105 transition-transform duration-200`}
-              onClick={() => setSelectedItem(item.label)}
-            >
-              <Image
-                src={item.icon}
-                width={20}
-                height={20}
-                alt={item.icon}
-                className={`group-hover:invert group-hover:brightness-0 group-hover:contrast-200 group-hover:scale-110 transition-transform duration-200 ${selectedItem === item.label && 'invert brightness-0' }`}
-              />
-              <span className={`hidden ${isOpen ? "hidden" : "lg:block"}`}>
-                {item.label}
-              </span>
-            </Link>
-          ))}
+          {i.items.map(item=>{
+             if(item.visible.includes(role)){
+              return(
+                <Link
+                href={item.href}
+                // href={"#"}
+                key={item.label}
+                className={`group flex items-center justify-center lg:justify-start gap-4 text-gray-500 p-2 ml-2  ${selectedItem === item.label && 'bg-primary text-white rounded-md' } hover:bg-primary hover:rounded-md hover:text-white  hover:text-md hover:scale-105 transition-transform duration-200`}
+                onClick={() => setSelectedItem(item.label)}
+              >
+                <Image
+                  src={item.icon}
+                  width={20}
+                  height={20}
+                  alt={item.icon}
+                  className={`group-hover:invert group-hover:brightness-0 group-hover:contrast-200 group-hover:scale-110 transition-transform duration-200 ${selectedItem === item.label && 'invert brightness-0' }`}
+                />
+                <span className={`hidden ${isOpen ? "hidden" : "lg:block"}`}>
+                  {item.label}
+                </span>
+              </Link>
+              )
+             }
+            })}
         </div>
       ))}
     </div>
